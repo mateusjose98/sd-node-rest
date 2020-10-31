@@ -23,7 +23,7 @@ const bd = [
 ]
 
 app.use(express.json());
-app.get("/" (req, res) => {
+app.get("/", (req, res) => {
     res.send("BEM VINDO AO SISTEMA");
 })
 app.get("/pizzas/:numPizza", (request, response)=>{
