@@ -4,11 +4,27 @@ const express = require("express");
 const porta = process.env.PORT || 80;
 const app = express();
 
-app.get("/", (request, response)=>{
+const bd = [
+    {
+        nome: "Calabresa",
+        foto: "https://media.istockphoto.com/photos/pizza-de-calabresa-picture-id874333030",
+        preco: 12.0
+    },
+    {
+        nome: "Portuguesa",
+        foto: "https://media.istockphoto.com/photos/pizza-de-calabresa-picture-id874333030",
+        preco: 12.0
+    },
+    {
+        nome: "Calabresa",
+        foto: "https://media.istockphoto.com/photos/pizza-de-calabresa-picture-id874333030",
+        preco: 12.0
+    },
+]
 
-    console.log("teste");
+app.get("/pizzas", (request, response)=>{
 
-    response.send("resposta do servidor")
+    response.send(JSON.stringify(bd));
 
 });
 
