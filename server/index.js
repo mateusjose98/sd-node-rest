@@ -22,7 +22,7 @@ const bd = [
     },
 ]
 
-app.get("/pizzas/:numpizza", (request, response)=>{
+app.get("/pizzas/:numPizza", (request, response)=>{
     const numPizza = request.params.numpizza;
 
     if (numPizza >= 0 && numPizza < bd.length){
