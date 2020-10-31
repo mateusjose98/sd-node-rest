@@ -1,0 +1,22 @@
+{
+  "name": "sd-rest",
+  "version": "0.0.1",
+  "description": "servidor e cliente REST usando EXPRESS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mateusjose98/sd-node-rest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mateusjose98/sd-node-rest/issues"
+  },
+  "homepage": "https://github.com/mateusjose98/sd-node-rest#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
