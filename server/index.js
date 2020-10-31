@@ -22,6 +22,8 @@ const bd = [
     },
 ]
 
+app.use(express.json());
+
 app.get("/pizzas/:numPizza", (request, response)=>{
     const numPizza = request.params.numpizza;
 
@@ -33,6 +35,15 @@ app.get("/pizzas/:numPizza", (request, response)=>{
     
 
 });
+
+app.post("/cadastrar", (req, res) =>{
+    const pizza = req.body;
+
+
+    bd.push(pizza);
+
+    res.send("OK");
+})
 
 
 
