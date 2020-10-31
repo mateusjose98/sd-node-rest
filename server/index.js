@@ -22,9 +22,15 @@ const bd = [
     },
 ]
 
-app.get("/pizzas", (request, response)=>{
+app.get("/pizzas/:numpizza", (request, response)=>{
+    const numPizza = request.params.numpizza;
 
-    response.send(JSON.stringify(bd));
+    if (numPizza >= 0 && numPizza < bd.length){
+        response.send(JSON.stringify(bd[numPizza]));
+    } else {
+        response.status(404).send();
+    }
+    
 
 });
 
